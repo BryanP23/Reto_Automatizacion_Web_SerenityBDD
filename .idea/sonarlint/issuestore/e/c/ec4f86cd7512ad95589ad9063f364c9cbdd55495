@@ -1,0 +1,8 @@
+
+o	java:S100"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¹øµÙÿÿÿÿÿ8Îûšó0
+o	java:S100"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÌóíÙÿÿÿÿÿ8Îûšó0
+d
+java:S1128"GRemove this unused import 'net.serenitybdd.screenplay.waits.WaitUntil'.(˜• Ü8ì¿œœó0
+„
+java:S1128
+"bRemove this unused import 'net.serenitybdd.screenplay.matchers.WebElementStateMatchers.isEnabled'.(¬ƒºáûÿÿÿÿ8ì¿œœó0
