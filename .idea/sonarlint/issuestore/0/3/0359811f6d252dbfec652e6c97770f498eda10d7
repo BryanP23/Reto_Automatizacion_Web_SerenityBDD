@@ -1,34 +1,0 @@
-
-r	java:S1172"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(×óŸ¢üÿÿÿÿ8úÀ–¡ó0
-o	java:S116"NRename this field "CVC" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(œ™¤Ñøÿÿÿÿ8€Á–¡ó0
-t
-java:S1450"RRemove the "CVC" field and declare it as a local variable in the relevant methods.(œ™¤Ñøÿÿÿÿ8€Á–¡ó0
-w
-java:S1450"ZRemove the "annoTarjeta" field and declare it as a local variable in the relevant methods.(å˜ÍØ8€Á–¡ó0
-y
-java:S1450"WRemove the "cantidad" field and declare it as a local variable in the relevant methods.(ƒƒ×«ÿÿÿÿÿ8€Á–¡ó0
-{
-java:S1450"YRemove the "mesTarjeta" field and declare it as a local variable in the relevant methods.(—•ÏĞøÿÿÿÿ8€Á–¡ó0
-~
-java:S1450"\Remove the "nombreTarjeta" field and declare it as a local variable in the relevant methods.(úàüúÿÿÿÿ8€Á–¡ó0
-x
-java:S1450"\Remove the "numeroTarjeta" field and declare it as a local variable in the relevant methods.(úƒ†w8€Á–¡ó0
-o	java:S1002"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(×óŸ¢üÿÿÿÿ8Á–¡ó0
-Q
-java:S1128"/Remove this unused import 'java.time.Duration'.(ëá¯‰üÿÿÿÿ8öÿ¶¢ó0
-a
-java:S1128"DRemove this unused import 'com.sofkau.ui.FlujoDeCompra.BOTON_PAGAR'.(€†Çˆ8÷ÿ¶¢ó0
-X
-java:S1128";Remove this unused import 'com.tigervnc.rfb.Keysyms.Pause'.(ó€•ã8÷ÿ¶¢ó0
-N
-java:S1068",Remove this unused "cantidad" private field.(ƒƒ×«ÿÿÿÿÿ8…Á–¡ó0
-S
-java:S1068"1Remove this unused "nombreTarjeta" private field.(úàüúÿÿÿÿ8…Á–¡ó0
-M
-java:S1068"1Remove this unused "numeroTarjeta" private field.(úƒ†w8…Á–¡ó0
-I
-java:S1068"'Remove this unused "CVC" private field.(œ™¤Ñøÿÿÿÿ8…Á–¡ó0
-P
-java:S1068".Remove this unused "mesTarjeta" private field.(—•ÏĞøÿÿÿÿ8…Á–¡ó0
-L
-java:S1068"/Remove this unused "annoTarjeta" private field.(å˜ÍØ8…Á–¡ó0

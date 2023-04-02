@@ -9,12 +9,9 @@ import net.serenitybdd.screenplay.actions.Scroll;
 import net.serenitybdd.screenplay.waits.WaitUntil;
 import org.openqa.selenium.Keys;
 
-import java.time.Duration;
-
+import static com.sofkau.ui.ConfirmacionCompra.MENSAJE_COMPRA_EXITOSA;
 import static com.sofkau.ui.FlujoDeCompra.*;
-import static com.sofkau.ui.FlujoDeCompra.BOTON_PAGAR;
-import static com.tigervnc.rfb.Keysyms.Pause;
-import static net.serenitybdd.screenplay.matchers.WebElementStateMatchers.isEnabled;
+import static net.serenitybdd.screenplay.matchers.WebElementStateMatchers.*;
 
 
 public class ComprarProductos implements Task {
@@ -66,27 +63,48 @@ public class ComprarProductos implements Task {
                 Click.on(BOTON_COMO_QUIERES_RECIBIR_PRODUCTOS),
                 Click.on(SELECCIONAR_ENVIO_A_DOMICILIO),
                 Click.on(BOTON_CONFIRMAR_DOMICILIO),
-                Click.on(CERRAR_OPCIONES_ENVIO),
-                WaitUntil.the(CAMPO_BUSCAR, isEnabled()).forNoMoreThan(6).seconds(),
+                WaitUntil.the(BOTON_CONFIRMAR_DOMICILIO, isNotVisible()),
                 Click.on(CAMPO_BUSCAR),
                 Enter.theValue(busquedaProducto).into(CAMPO_BUSCAR),
                 Hit.the(Keys.ENTER).into(CAMPO_BUSCAR),
                 Click.on(CATEGORIA_BUSCAR),
                 Enter.theValue(busquedaCategoria).into(CATEGORIA_BUSCAR),
                 Click.on(CATEGORIA_POLLO),
+                WaitUntil.the(CATEGORIA_POLLO, isNotVisible()),
+                WaitUntil.the(BOTON_ORDENAR_POR, isClickable()),
                 Click.on(BOTON_ORDENAR_POR),
                 Click.on(MAYOR_PRECIO_PRIMERO),
+                WaitUntil.the(PRODUCTO_SELECCIONADO, isVisible()),
                 Click.on(PRODUCTO_SELECCIONADO),
+                WaitUntil.the(AGREGAR_PRODUCTO, isVisible()),
+                WaitUntil.the(AGREGAR_PRODUCTO, isClickable()),
                 Click.on(AGREGAR_PRODUCTO),
-                WaitUntil.the(BOTON_VER_CARRITO, isEnabled()).forNoMoreThan(2).seconds(),
+                WaitUntil.the(BOTON_VER_CARRITO, isClickable()),
+                Click.on(BOTON_VER_CARRITO),
+                WaitUntil.the(BOTON_IR_A_PAGAR, isVisible()),
+                WaitUntil.the(BOTON_IR_A_PAGAR, isClickable()),
+                Scroll.to(BOTON_IR_A_PAGAR),
                 Click.on(BOTON_IR_A_PAGAR),
+                WaitUntil.the(BOTON_CONTINUAR_BOLSA, isVisible()),
+                WaitUntil.the(BOTON_CONTINUAR_BOLSA, isClickable()),
                 Click.on(BOTON_CONTINUAR_BOLSA),
+                WaitUntil.the(BOTON_CONTINUAR_BOLSA, isNotVisible()),
+                WaitUntil.the(BOTON_ELIGE_FECHA_ENTREGA, isVisible()),
+                Scroll.to(BOTON_ELIGE_FECHA_ENTREGA),
                 Click.on(BOTON_ELIGE_FECHA_ENTREGA),
+                WaitUntil.the(FECHA_DE_ENTREGA, isVisible()),
+                WaitUntil.the(FECHA_DE_ENTREGA, isClickable()),
                 Click.on(FECHA_DE_ENTREGA),
-                Scroll.to(BOTON_CONTINUAR_COMPRA),
+                WaitUntil.the(BOTON_CONTINUAR_COMPRA, isVisible()).forNoMoreThan(5).seconds(),
+                WaitUntil.the(BOTON_CONTINUAR_COMPRA, isClickable()),
                 Click.on(BOTON_CONTINUAR_COMPRA),
-                Click.on(BOTON_METODO_PAGO)
-                //Click.on(BOTON_PAGAR)
+                Scroll.to(BOTON_METODO_PAGO),
+                //WaitUntil.the(BOTON_METODO_PAGO, isVisible()),
+                WaitUntil.the(BOTON_METODO_PAGO, isClickable()),
+                Click.on(BOTON_METODO_PAGO),
+                WaitUntil.the(BOTON_PAGAR, isEnabled()).forNoMoreThan(7).seconds(),
+                Click.on(BOTON_PAGAR),
+                WaitUntil.the(MENSAJE_COMPRA_EXITOSA, isVisible())
 
         );
     }

@@ -17,7 +17,7 @@ import static net.serenitybdd.screenplay.actors.OnStage.theActorCalled;
 import static net.thucydides.core.webdriver.ThucydidesWebDriverSupport.getDriver;
 public class Configuracion {
     private static final String SWITCHES = "--remote-allow-origins=*";
-    private static final String ACTOR = "Juanes";
+    private static final String ACTOR = "BRYAN POLO";
     private static final int DIEZ_SEGUNDOS = 10;
 
     @Managed()
